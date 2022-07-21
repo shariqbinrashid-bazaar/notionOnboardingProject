@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: template
+
+# AWS SecretsManager
+aws:
+  secretsmanager:
+    prefix: /service
+    profile-separator: .

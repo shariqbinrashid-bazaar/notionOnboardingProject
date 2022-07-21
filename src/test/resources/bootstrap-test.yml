@@ -1,0 +1,8 @@
+aws:
+  secretsmanager:
+    enabled: false
+
+cloud:
+  aws:
+    region:
+      static: us-east-2

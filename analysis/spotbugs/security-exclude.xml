@@ -1,0 +1,8 @@
+<FindBugsFilter>
+    <!--  excluding check for Bug:"SPRING_CSRF_PROTECTION_DISABLED" as session-less REST doesn't require CSRF protection  -->
+    <Match>
+        <Class name="com.bazaar.api.template.security.config.ApplicationSecurityConfiguration" />
+        <Method returns="void" name="configure" params="org.springframework.security.config.annotation.web.builders.HttpSecurity" />
+        <Bug pattern="SPRING_CSRF_PROTECTION_DISABLED" />
+    </Match>
+</FindBugsFilter>

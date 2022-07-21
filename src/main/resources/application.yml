@@ -1,0 +1,41 @@
+server:
+  port: 5010
+
+cloud:
+  aws:
+    stack:
+      auto: false
+
+  # Metrics related configurations
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+    ################ Liquibase ####################
+liquibase:
+  datasource:
+    template-db.changelog: classpath:migrations/prod/db.changelog-master.xml
+
+bazaar:
+  datasource:
+    template-db:
+      maximum-pool-size: 25

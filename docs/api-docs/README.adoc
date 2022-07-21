@@ -1,0 +1,37 @@
+
+
+= Bazaar Backend Template API Docs
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: preamble
+:sectnums:
+
+*Project  version:* {project-version}
+
+`Note: All URLs in this document are relative to the base Server URL`
+
+
+== Template Controller APIs
+:snippets-dir: ../../target/generated-snippets
+
+=== Get Template
+==== Request Payload
+[source,http,options="nowrap"]
+----
+GET /v1/template HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Host: localhost:5012
+
+----
+==== Response Payload
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 8
+
+Template
+----
+

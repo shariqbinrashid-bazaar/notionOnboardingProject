@@ -1,0 +1,31 @@
+server:
+  port: 5010
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+      apache:
+        coyote:
+          http11:
+            Http11InputBuffer: DEBUG
+
+bazaar:
+  datasource:
+    template-db:
+      url: jdbc:mysql://localhost:3306/bazaar_template
+      username: root
+      password: my-secret-pw
+
+liquibase:
+  datasource:
+    template-db:
+      url: jdbc:mysql://localhost:3306/bazaar_template
+      username: root
+      password: my-secret-pw
+      changelog: classpath:migrations/local/db.changelog-local.xml

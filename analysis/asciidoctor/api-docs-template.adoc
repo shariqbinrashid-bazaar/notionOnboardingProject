@@ -1,0 +1,23 @@
+
+
+= Bazaar Backend Template API Docs
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: preamble
+:sectnums:
+
+*Project  version:* {project-version}
+
+`Note: All URLs in this document are relative to the base Server URL`
+
+
+== Template Controller APIs
+:snippets-dir: ../../target/generated-snippets
+
+=== Get Template
+==== Request Payload
+include::{snippets-dir}/get-template/with-good-payload/http-request.adoc[]
+==== Response Payload
+include::{snippets-dir}/get-template/with-good-payload/http-response.adoc[]
+
